@@ -1,8 +1,8 @@
-#include "skyrimsavegame.h"
+#include "enderalsavegame.h"
 
 #include <Windows.h>
 
-SkyrimSaveGame::SkyrimSaveGame(QString const &fileName, MOBase::IPluginGame const *game) :
+EnderalSaveGame::EnderalSaveGame(QString const &fileName, MOBase::IPluginGame const *game) :
   GamebryoSaveGame(fileName, game)
 {
   FileWrapper file(this, "TESV_SAVEGAME");

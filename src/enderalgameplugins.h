@@ -1,5 +1,5 @@
-#ifndef _SKYRIMGAMEPLUGINS_H
-#define _SKYRIMGAMEPLUGINS_H
+#ifndef _ENDERALGAMEPLUGINS_H
+#define _ENDERALGAMEPLUGINS_H
 
 
 #include <gamebryogameplugins.h>
@@ -8,10 +8,10 @@
 #include <map>
 
 
-class SkyrimGamePlugins : public GamebryoGamePlugins
+class EnderalGamePlugins : public GamebryoGamePlugins
 {
 public:
-    SkyrimGamePlugins(MOBase::IOrganizer *organizer);
+    EnderalGamePlugins(MOBase::IOrganizer *organizer);
 
     virtual void readPluginLists(MOBase::IPluginList *pluginList) override;
 
@@ -25,4 +25,4 @@ private:
     QTextCodec *m_LocalCodec;
 };
 
-#endif // _SKYRIMSEGAMEPLUGINS_H
+#endif // _ENDERALSEGAMEPLUGINS_H

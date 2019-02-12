@@ -1,4 +1,4 @@
-#include "skyrimgameplugins.h"
+#include "enderalgameplugins.h"
 #include <safewritefile.h>
 #include <report.h>
 #include <ipluginlist.h>
@@ -16,13 +16,13 @@ using MOBase::IOrganizer;
 using MOBase::SafeWriteFile;
 using MOBase::reportError;
 
-SkyrimGamePlugins::SkyrimGamePlugins(IOrganizer *organizer)
+EnderalGamePlugins::EnderalGamePlugins(IOrganizer *organizer)
     : GamebryoGamePlugins(organizer)
 {
     m_LocalCodec = QTextCodec::codecForName("Windows-1252");
 }
 
-void SkyrimGamePlugins::readPluginLists(MOBase::IPluginList *pluginList) {
+void EnderalGamePlugins::readPluginLists(MOBase::IPluginList *pluginList) {
   QString loadOrderPath =
     organizer()->profile()->absolutePath() + "/loadorder.txt";
   QString pluginsPath = organizer()->profile()->absolutePath() + "/plugins.txt";
@@ -55,7 +55,7 @@ void SkyrimGamePlugins::readPluginLists(MOBase::IPluginList *pluginList) {
 }
 
 //TODO: return value is incorrect and should be ignored (it's not currently used
-QStringList SkyrimGamePlugins::readPluginList(MOBase::IPluginList *pluginList)
+QStringList EnderalGamePlugins::readPluginList(MOBase::IPluginList *pluginList)
 {
     QStringList plugins = pluginList->pluginNames();
     QStringList primaryPlugins = organizer()->managedGame()->primaryPlugins();
